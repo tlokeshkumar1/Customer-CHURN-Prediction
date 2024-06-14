@@ -56,6 +56,9 @@ rf_rec = recall_score(y_test, y_pred_rf)
 logistic_cm = confusion_matrix(y_test, y_pred_logistic)
 rf_cm = confusion_matrix(y_test, y_pred_rf)
 
+# Save Logistic Regression model to file
+joblib.dump(logistic_clf, 'logistic_model.pkl')
+
 # Save Random Forest model to file
 joblib.dump(random_forest_clf, 'random_forest_model.pkl')
 
